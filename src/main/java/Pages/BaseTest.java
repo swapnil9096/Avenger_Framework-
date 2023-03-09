@@ -20,15 +20,15 @@ public class BaseTest {
 
 	public static WebDriver driver;
 	public static Properties prop;
+	public static Object[][] data;
 	
-	public BaseTest() 
-	{
+	public BaseTest() {
 		String path = System.getProperty("user.dir") + "/src/test/resources/config.properties";
 		try {
 			FileInputStream fis = new FileInputStream(path);
 			prop = new Properties();
 			prop.load(fis);
-			
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			System.out.println("File Not found..!!");
@@ -36,71 +36,48 @@ public class BaseTest {
 			e.printStackTrace();
 			System.out.println("Error in file reading...!!!");
 		}
+
+		
 	}
-	
-	public void init()
-	{
+
+	public void init() {
 		String browser = prop.getProperty("browser");
-		
-		if(browser.equalsIgnoreCase("CHROME"))
-		{
+
+		if (browser.equalsIgnoreCase("CHROME")) {
 			WebDriverManager.chromedriver().setup();
-			 driver = new ChromeDriver();
-		}else if(browser.equalsIgnoreCase("EDGE")) 
-		{
+			driver = new ChromeDriver();
+		} else if (browser.equalsIgnoreCase("EDGE")) {
 			WebDriverManager.edgedriver().setup();
-			 driver = new EdgeDriver();
-		}
-		else
-		throw new RuntimeException("Invalid browser...." + browser);
-	
+			driver = new EdgeDriver();
+		} else
+			throw new RuntimeException("Invalid browser...." + browser);
+
 		driver.get(prop.getProperty("url"));
-		
+
 		boolean maximize = Boolean.parseBoolean(prop.getProperty("maximize"));
-		if(maximize)
-		driver.manage().window().maximize();
-		
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicittimeout"))));
+		if (maximize)
+			driver.manage().window().maximize();
+
+		driver.manage().timeouts()
+				.implicitlyWait(Duration.ofSeconds(Integer.parseInt(prop.getProperty("implicittimeout"))));
 	}
-	
-	public String getScreenshot(String testCaseName)
-	{
-		TakesScreenshot  ts =(TakesScreenshot)driver;
+
+	public String getScreenshot(String testCaseName) {
+		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty(System.getProperty("user.dir")+ "\\src\\test\\resources\\reports\\" + testCaseName + ".png"));
-		
+		File file = new File(System.getProperty(
+				System.getProperty("user.dir") + "\\src\\test\\resources\\reports\\" + testCaseName + ".png"));
+
 		try {
 			FileUtils.copyFile(source, file);
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Error in copying file...!!");
 		}
-		
-		return System.getProperty(System.getProperty("user.dir")+ "\\src\\test\\resources\\reports\\" + testCaseName + ".png");
-		
+
+		return System.getProperty(
+				System.getProperty("user.dir") + "\\src\\test\\resources\\reports\\" + testCaseName + ".png");
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

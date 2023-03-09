@@ -66,73 +66,83 @@ public class HomePage extends BaseTest{
 		 return new AdminLinkPage();
 	}
 	
-	public void pimLink()
+	public PIMpage pimLink()
 	{
 		driver.findElement(pimLink);
 		Utilities.explicitWait(pimLink);
 		Utilities.click(pimLink);
+		return new PIMpage();
 	}
-	public void leave()
+	public LeavePage leave()
 	{
 		driver.findElement(leave);
 		Utilities.explicitWait(leave);
 		Utilities.click(leave);
+		return new LeavePage();
 	}
-	public void timeLink()
+	public TimePage timeLink()
 	{
 		driver.findElement(timeLink);
 		Utilities.explicitWait(timeLink);
 		Utilities.click(timeLink);
+		return new TimePage();
 	}
-	public void recruitmentLink()
+	public RecruitmentPage recruitmentLink()
 	{
 		driver.findElement(recruitmentLink);
 		Utilities.explicitWait(recruitmentLink);
 		Utilities.click(recruitmentLink);
+		return new RecruitmentPage();
 	}
 	
-	public void infoLink()
+	public InfoLink infoLink()
 	{
 		driver.findElement(infoLink);
 		Utilities.explicitWait(infoLink);
 		Utilities.click(infoLink);
+		return new InfoLink();
 	}
 	
-	public void clickOnPerformanceLink()
+	public PerformancePage clickOnPerformanceLink()
 	{
 		driver.findElement(performanceLink);
 		Utilities.explicitWait(performanceLink);
 		Utilities.click(performanceLink);
+		return new PerformancePage();
 	}
-	public Dashboard dashboardLink()
+	
+	public DashboardPage dashboardLink()
 	{
 		WebElement ele = driver.findElement(dashboardLink);
 		
 		if(!ele.isSelected())
 		Utilities.explicitWait(dashboardLink);
 		Utilities.click(dashboardLink);
-		
-		return new Dashboard();
+		return new DashboardPage();
 	}
 	
-	public void directoryLink()
+	public DirectoryPage directoryLink()
 	{
 		driver.findElement(directoryLink);
 		Utilities.explicitWait(directoryLink);
 		Utilities.click(directoryLink);
+		return new DirectoryPage();
 	}
-	public void maintenanceLink()
+	
+	public MaintenancePage maintenanceLink()
 	{
 		driver.findElement(maintenanceLink);
 		Utilities.explicitWait(maintenanceLink);
 		Utilities.click(maintenanceLink);
+		return new MaintenancePage();
 	}
-	public void clickOnBuzzLink()
+	
+	public BuzzPage clickOnBuzzLink()
 	{
 		driver.findElement(buzzLink);
 		Utilities.explicitWait(buzzLink);
 		Utilities.click(buzzLink);
-		
+		return new BuzzPage();
 	}
 	
 	public void getAllLinks()

@@ -22,8 +22,10 @@ public class AdminLinkTest extends BaseTest {
 	HomePage homepage;
 	LoginPage loginpage;
 	AdminLinkPage adminlink;
+	
 	WebElement ele;
 	String text ;
+	
 	// reading .properties file
 	public AdminLinkTest() {
 		super();
@@ -44,7 +46,7 @@ public class AdminLinkTest extends BaseTest {
 		driver.quit();
 	}
 
-	// verifying user ddl list of select user
+	// verifying user droopdown list of select user
 	@Test
 	public void verifySelectUserRoleDDL() throws InterruptedException {
 		// login to app
@@ -81,6 +83,8 @@ public class AdminLinkTest extends BaseTest {
 		Assert.assertEquals(text,"ESS","Test Case Failed.....");
 	}
 
+	
+	//verifying status dropdown list
 	@Test
 	public void verifyStatusDDL() throws InterruptedException
 	{
@@ -115,6 +119,8 @@ public class AdminLinkTest extends BaseTest {
 		Assert.assertEquals(text, "Disabled","Test Case Failed.....");
 	}
 	
+	
+	//verifying System users text field
 	@Test(dataProvider="getText",dataProviderClass = DataSet.class)
 	public void verifyUserNameText(String txtUsername,String tf) throws InterruptedException
 	{
@@ -145,6 +151,7 @@ public class AdminLinkTest extends BaseTest {
 	
 	}
 	
+	//verifying employee name text field
 	@Test 
 	public void verifyEmpNameText() throws InterruptedException
 	{
@@ -210,17 +217,8 @@ public class AdminLinkTest extends BaseTest {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-//	No Records Found
-	
+
+	//getting all records
 	@Test(alwaysRun=false)
 	public void verifyAllRecords()
 	{
@@ -241,17 +239,5 @@ public class AdminLinkTest extends BaseTest {
 			cnt++;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

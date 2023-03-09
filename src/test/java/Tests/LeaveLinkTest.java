@@ -15,9 +15,7 @@ import Pages.LoginPage;
 public class LeaveLinkTest extends BaseTest{
 
 	LoginPage loginpage ;
-	
 	HomePage homepage ;
-	
 	LeavePage  leavepage ;
 	
 	public	LeaveLinkTest()
@@ -40,7 +38,7 @@ public class LeaveLinkTest extends BaseTest{
 		driver.quit();
 	}
 	
-	
+	//verifying leave list functionality
 	@Test
 	public void verifyMyLeaveLink() throws InterruptedException
 	{

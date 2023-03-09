@@ -36,6 +36,8 @@ public class PerformancePageTest extends BaseTest{
 		driver.quit();
 	}
 	
+	
+	//verifying add log functionality
 	@Test
 	public void verifyAddLog()
 	{

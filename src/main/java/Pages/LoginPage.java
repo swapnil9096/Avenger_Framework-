@@ -11,12 +11,12 @@ public class LoginPage extends BaseTest{
 		super();
 	}
 
-	By txtUsername = By.name("username");
-	By txtPassword = By.name("password");
-	By btnLogin    = By.cssSelector("button[type='submit']");
-	By errorRequired = By.xpath("(//div/span)[1]");
-	By errorInvalid = By.cssSelector("div[class='oxd-alert oxd-alert--error']");
-	
+	By txtUsername 		= By.name("username");
+	By txtPassword 		= By.name("password");
+	By btnLogin    		= By.cssSelector("button[type='submit']");
+	By errorRequired 	= By.xpath("(//div/span)[1]");
+	By errorInvalid 	= By.cssSelector("div[class='oxd-alert oxd-alert--error']");
+	By loginName   		= By.xpath("//h5"); 
 	
 	public  void enterUsername(String un)
 	{
@@ -49,8 +49,16 @@ public class LoginPage extends BaseTest{
 		return driver.findElement(errorInvalid).getText();
 	}
 	
+	public String getLoginName()
+	{
+		Utilities.explicitWait(loginName);
+		return driver.findElement(loginName).getText();
+	}
+	
 	public HomePage getLogin(String un,String pwd)
 	{
+		
+		
 		enterUsername(un);
 		enterPassword(pwd);
 		clickOnLoginBtn();

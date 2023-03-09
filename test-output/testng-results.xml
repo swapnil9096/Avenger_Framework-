@@ -1,25 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="6" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-02T14:04:25 IST" name="Suite" finished-at="2023-03-02T14:05:28 IST" duration-ms="63095">
+  <suite started-at="2023-03-09T10:39:51 IST" name="Default suite" finished-at="2023-03-09T10:42:52 IST" duration-ms="180095">
     <groups>
     </groups>
-    <test started-at="2023-03-02T14:04:25 IST" name="Test" finished-at="2023-03-02T14:05:28 IST" duration-ms="63095">
-      <class name="Tests.BuzzTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.BuzzTest@3d3e5463]" started-at="2023-03-02T14:04:25 IST" name="setUp" finished-at="2023-03-02T14:05:04 IST" duration-ms="38773" status="PASS">
+    <test started-at="2023-03-09T10:39:51 IST" name="Default test" finished-at="2023-03-09T10:42:52 IST" duration-ms="180095">
+      <class name="Tests.LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:39:52 IST" name="setUp" finished-at="2023-03-09T10:40:47 IST" duration-ms="55361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyBuzzPost()[pri:0, instance:Tests.BuzzTest@3d3e5463]" started-at="2023-03-02T14:05:04 IST" name="verifyBuzzPost" finished-at="2023-03-02T14:05:20 IST" duration-ms="15887" status="PASS">
+        <test-method signature="verifyLoginWthInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:40:47 IST" name="verifyLoginWthInvalidCredentials" data-provider="InvalidCredentials" finished-at="2023-03-09T10:41:00 IST" duration-ms="13510" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hello]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hello]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyBuzzPost -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.BuzzTest@3d3e5463]" started-at="2023-03-02T14:05:20 IST" name="tearDown" finished-at="2023-03-02T14:05:28 IST" duration-ms="8241" status="PASS">
+        </test-method> <!-- verifyLoginWthInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:41:00 IST" name="tearDown" finished-at="2023-03-09T10:41:06 IST" duration-ms="5227" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Tests.BuzzTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:41:06 IST" name="setUp" finished-at="2023-03-09T10:41:27 IST" duration-ms="21371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginWthInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:41:27 IST" name="verifyLoginWthInvalidCredentials" data-provider="InvalidCredentials" finished-at="2023-03-09T10:41:29 IST" duration-ms="2071" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWthInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:41:29 IST" name="tearDown" finished-at="2023-03-09T10:41:34 IST" duration-ms="4554" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:41:34 IST" name="setUp" finished-at="2023-03-09T10:42:31 IST" duration-ms="57231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginWthInvalidCredentials(java.lang.String,java.lang.String)[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:42:31 IST" name="verifyLoginWthInvalidCredentials" data-provider="InvalidCredentials" finished-at="2023-03-09T10:42:47 IST" duration-ms="15820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginWthInvalidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Tests.LoginPageTest@470734c3]" started-at="2023-03-09T10:42:47 IST" name="tearDown" finished-at="2023-03-09T10:42:52 IST" duration-ms="4805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Tests.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

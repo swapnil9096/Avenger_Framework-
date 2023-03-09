@@ -37,6 +37,7 @@ public class RecruitmentPageTest extends BaseTest {
 		driver.quit();
 	}
 	
+//	verifying add candidates functionality
 	@Test
 	public void verifyAddCandidates() throws InterruptedException
 	{

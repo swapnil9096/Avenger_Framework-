@@ -42,7 +42,7 @@ public class CustomListeners extends BaseTest implements ITestListener,ISuiteLis
 	
 	public void onTestSkipped(ITestResult result)
 	{
-		System.out.println("$$$$$$$$$$ onTestSkipped method executed : " + result.getMethod());
+		System.out.println("onTestSkipped method executed : " + result.getMethod());
 		
 	}
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result)

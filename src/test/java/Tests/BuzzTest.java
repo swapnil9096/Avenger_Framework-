@@ -36,6 +36,8 @@ public class BuzzTest extends BaseTest{
 		driver.quit();
 	}
 	
+	
+	//verifying post newsfeed functionality
 	@Test
 	public void verifyBuzzPost()
 	{

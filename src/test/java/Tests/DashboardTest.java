@@ -8,13 +8,13 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import Pages.BaseTest;
-import Pages.Dashboard;
+import Pages.DashboardPage;
 import Pages.HomePage;
 import Pages.LoginPage;
 
 public class DashboardTest extends BaseTest {
 
-	Dashboard dashboard ;
+	DashboardPage dashboard ;
 	LoginPage loginpage;
 	HomePage homepage;
 	public DashboardTest()
@@ -26,7 +26,7 @@ public class DashboardTest extends BaseTest {
 	public void setUp()
 	{
 		init();
-		dashboard = new Dashboard();
+		dashboard = new DashboardPage();
 		loginpage = new LoginPage();
 		homepage  = new HomePage();
 	}
@@ -56,6 +56,8 @@ public class DashboardTest extends BaseTest {
 	
 	}
 	
+	
+	//verifying my actions broken links
 	@Test
 	public void verifyMyActionsLinks()
 	{	

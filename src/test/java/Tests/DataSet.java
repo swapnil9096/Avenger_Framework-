@@ -10,6 +10,7 @@ public class DataSet {
 
 	HomePage homepage = new HomePage();
 
+	//Inputs for search links 
 	@DataProvider(name = "getLinks")
 	public Object[][] getLink() {
 
@@ -23,16 +24,23 @@ public class DataSet {
 
 	}
 
+	
 	@DataProvider(name = "getText")
 	public Object[][] getTextUsername() {
 
 		Object[][] data = {
 
-				{ "admin", "valid" }, { " admin", "invalid" }, { "admin ", "valid" }, { "admin123", "invalid" } };
+								{ "admin", "valid" },
+								{ " admin", "invalid" }, 
+								{ "admin ", "valid" }, 
+								{ "admin123", "invalid" } 
+				
+							};
 		return data;
 
 	}
 
+	//Creating random employee id
 	@DataProvider(name="addEmpId")
 	public String[] getRandomNumbers() {
 		Random random = new Random();
@@ -44,4 +52,20 @@ public class DataSet {
 		return str;
 
 	}
+	
+	
+	//Invalid credentials for login
+	@DataProvider(name="InvalidCredentials")
+	public Object[][] getData()
+	{
+		Object [] [] data = { 
+				{"Hello","Hello"},
+				{" ","admin123"},
+				{"Admin"," "}
+		};
+		
+		return data;
+	}
+	
+	
 }

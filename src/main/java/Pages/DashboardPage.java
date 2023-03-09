@@ -5,9 +5,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class Dashboard extends BaseTest{
+public class DashboardPage extends BaseTest{
 
-	public Dashboard()
+	public DashboardPage()
 	{
 		super();
 	}
